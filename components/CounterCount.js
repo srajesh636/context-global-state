@@ -4,9 +4,10 @@ import {CounterContext} from '../context';
 
 const CounterCount = () => {
   const {state} = useContext(CounterContext);
+  const {counter} = state;
   return (
     <View>
-      <Text style={styles.text}>{state.count}</Text>
+      <Text style={styles.text}>{counter.count}</Text>
     </View>
   );
 };

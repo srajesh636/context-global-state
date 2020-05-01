@@ -1,10 +1,10 @@
 import React, {useMemo, useReducer} from 'react';
 import {initialState} from '../constants';
 import {CounterContext} from '../context';
-import {counterReducer} from '../reducers/index';
+import {rootReducer} from '../reducers/';
 
 const Provider = ({children}) => {
-  const [state, dispatch] = useReducer(counterReducer, initialState);
+  const [state, dispatch] = useReducer(rootReducer, initialState);
 
   const value = useMemo(() => {
     return {state, dispatch};
