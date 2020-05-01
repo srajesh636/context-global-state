@@ -1,0 +1,6 @@
+module Pods_ReactContext {
+  umbrella header "Pods-ReactContext-umbrella.h"
+
+  export *
+  module * { export * }
+}

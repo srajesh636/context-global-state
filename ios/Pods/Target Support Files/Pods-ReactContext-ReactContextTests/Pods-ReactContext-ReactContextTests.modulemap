@@ -1,0 +1,6 @@
+module Pods_ReactContext_ReactContextTests {
+  umbrella header "Pods-ReactContext-ReactContextTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
