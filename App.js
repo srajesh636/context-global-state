@@ -1,23 +1,10 @@
-import React, {useMemo, useReducer} from 'react';
+import React from 'react';
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
-
-import {Counter, CounterCount} from './components';
-
-import {initialState} from './constants';
-import {CounterContext} from './context';
-import {counterReducer} from './reducers';
+import {Counter, CounterCount, Provider} from './components';
 
 const App = () => {
-  const {Provider} = CounterContext;
-
-  const [state, dispatch] = useReducer(counterReducer, initialState);
-
-  const value = useMemo(() => {
-    return {state, dispatch};
-  }, [state, dispatch]);
-
   return (
-    <Provider value={value}>
+    <Provider>
       <SafeAreaView>
         <View style={styles.container}>
           <Text style={styles.text}>useContext() + useReducer() = 😎</Text>
